@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\OpenCASCADE-7.7.0-vc14-64\opencascade-7.7.0\inc;D:\glfw\install\include;.\imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\OpenCASCADE-7.7.0-vc14-64\opencascade-7.7.0\inc;D:\glfw\install\include;.\ui;.\occt;.\configs;.\3dparty\imgui</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,34 +130,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="imgui\imgui.cpp" />
-    <ClCompile Include="imgui\imgui_demo.cpp" />
-    <ClCompile Include="imgui\imgui_draw.cpp" />
-    <ClCompile Include="imgui\imgui_impl_glfw.cpp" />
-    <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="imgui\imgui_tables.cpp" />
-    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui_demo.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui_tables.cpp" />
+    <ClCompile Include="3dparty\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="configs\imguiConfig.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="occtWindow.cpp" />
-    <ClCompile Include="occView.cpp" />
+    <ClCompile Include="occt\occtWindow.cpp" />
+    <ClCompile Include="occt\occView.cpp" />
     <ClCompile Include="ui\attributeDialog.cpp" />
     <ClCompile Include="ui\component.cpp" />
     <ClCompile Include="ui\mainMenuBar.cpp" />
     <ClCompile Include="ui\modelTree.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="configs.h" />
-    <ClInclude Include="imgui\imconfig.h" />
-    <ClInclude Include="imgui\imgui.h" />
-    <ClInclude Include="imgui\imgui_impl_glfw.h" />
-    <ClInclude Include="imgui\imgui_impl_opengl3.h" />
-    <ClInclude Include="imgui\imgui_impl_opengl3_loader.h" />
-    <ClInclude Include="imgui\imgui_internal.h" />
-    <ClInclude Include="imgui\imstb_rectpack.h" />
-    <ClInclude Include="imgui\imstb_textedit.h" />
-    <ClInclude Include="imgui\imstb_truetype.h" />
-    <ClInclude Include="occtWindow.h" />
-    <ClInclude Include="occView.h" />
+    <ClInclude Include="3dparty\imgui\imconfig.h" />
+    <ClInclude Include="3dparty\imgui\imgui.h" />
+    <ClInclude Include="3dparty\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="3dparty\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="3dparty\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="3dparty\imgui\imgui_internal.h" />
+    <ClInclude Include="3dparty\imgui\imstb_rectpack.h" />
+    <ClInclude Include="3dparty\imgui\imstb_textedit.h" />
+    <ClInclude Include="3dparty\imgui\imstb_truetype.h" />
+    <ClInclude Include="configs\configs.h" />
+    <ClInclude Include="configs\imguiConfig.h" />
+    <ClInclude Include="occt\occtWindow.h" />
+    <ClInclude Include="occt\occView.h" />
     <ClInclude Include="ui\attributeDialog.h" />
     <ClInclude Include="ui\component.h" />
     <ClInclude Include="ui\mainMenuBar.h" />
