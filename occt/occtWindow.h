@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <Aspect_DisplayConnection.hxx>
 #include <Aspect_RenderingContext.hxx>
 #include <Aspect_Window.hxx>
@@ -13,7 +14,7 @@ class GlfwOcctWindow : public Aspect_Window
 	DEFINE_STANDARD_RTTI_INLINE(GlfwOcctWindow, Aspect_Window)
 
 public:
-    GlfwOcctWindow(int theWidth, int theHeight, const TCollection_AsciiString& theTitle);
+    GlfwOcctWindow(int theWidth, int theHeight, const std::string& theTitle);
     virtual ~GlfwOcctWindow() { Close(); }
     void Close();
     const Handle(Aspect_DisplayConnection)& GetDisplay() const { return myDisplay; }

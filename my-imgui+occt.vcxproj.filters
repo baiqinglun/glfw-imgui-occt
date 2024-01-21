@@ -84,6 +84,9 @@
     <ClCompile Include="3dparty\imgui\imgui_widgets.cpp">
       <Filter>3dparty\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="configs\glfwConfig.cpp">
+      <Filter>源文件\configs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ui\mainMenuBar.h">
@@ -136,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="3dparty\imgui\imstb_truetype.h">
       <Filter>3dparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="configs\glfwConfig.h">
+      <Filter>头文件\configs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

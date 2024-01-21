@@ -137,6 +137,7 @@
     <ClCompile Include="3dparty\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="3dparty\imgui\imgui_tables.cpp" />
     <ClCompile Include="3dparty\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="configs\glfwConfig.cpp" />
     <ClCompile Include="configs\imguiConfig.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="occt\occtWindow.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="3dparty\imgui\imstb_textedit.h" />
     <ClInclude Include="3dparty\imgui\imstb_truetype.h" />
     <ClInclude Include="configs\configs.h" />
+    <ClInclude Include="configs\glfwConfig.h" />
     <ClInclude Include="configs\imguiConfig.h" />
     <ClInclude Include="occt\occtWindow.h" />
     <ClInclude Include="occt\occView.h" />

@@ -15,8 +15,8 @@
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
 
-GlfwOcctWindow::GlfwOcctWindow(int theWidth, int theHeight, const TCollection_AsciiString& theTitle)
-    : myGlfwWindow(glfwCreateWindow(theWidth, theHeight, theTitle.ToCString(), nullptr, nullptr)),
+GlfwOcctWindow::GlfwOcctWindow(int theWidth, int theHeight, const std::string& theTitle)
+    : myGlfwWindow(glfwCreateWindow(theWidth, theHeight, theTitle.c_str(), nullptr, nullptr)),
     myXLeft(0),
     myYTop(0),
     myXRight(0),
