@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+
 #include "imconfig.h"
 #include "imgui.h"
 #include "imgui_impl_glfw.h"

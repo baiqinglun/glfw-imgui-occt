@@ -3,6 +3,7 @@
 #include "occtWindow.h"
 #include "occView.h"
 #include "configs.h"
+//#include "mainMenuBar.h"
 
 int main(int, char**)
 {
@@ -13,12 +14,13 @@ int main(int, char**)
     if(glfwOcctView != nullptr)
         glfwOcctView->run();
     GLFWwindow* window = glfwOcctWindow->getGlfwWindow();
-    
     if (window == nullptr)
         return 1;
 
     slab::initImgui(window);
     
+    //ui::MainMenuBar *mainMenuBar = new ui::MainMenuBar;
+
     // 主循环
     while (!glfwWindowShouldClose(window))
     {
@@ -33,7 +35,7 @@ int main(int, char**)
         // 窗口组件
         slab::imguiRun();
         glfwOcctView->refrash();
-
+        //mainMenuBar->render();
         // 渲染
         ImGui::Render();
 

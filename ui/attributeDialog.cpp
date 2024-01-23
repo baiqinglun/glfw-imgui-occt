@@ -2,14 +2,12 @@
 
 void ui::AttributeDialog::render()
 {
-    bool showMyDialog = false;
-    ImGui::Begin("My Dialog", &showMyDialog, ImGuiWindowFlags_AlwaysAutoResize);
+    ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_Always);
+    ImGui::SetNextWindowSize(ImVec2(kWindow_width, kMainMenubar_height), ImGuiCond_Always);
 
-    ImGui::Text("This is a simple dialog.");
+    ImGui::Begin("Main Menu", nullptr, ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoResize);
 
-    if (ImGui::Button("OK")) {
-        showMyDialog = false;
-    }
+    ImGui::Text("da");
 
     ImGui::End();
 }

@@ -37,6 +37,15 @@
     <Filter Include="3dparty\imgui">
       <UniqueIdentifier>{bb5a252e-8258-42ab-8c37-283dcb9db4e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3dparty\ImGuiFileDialog">
+      <UniqueIdentifier>{224ac7fd-0bb4-4449-9b67-7a8ca3b1f865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3dparty\ImGuiFileDialog\dirent">
+      <UniqueIdentifier>{c5412f3a-b9c4-4f90-9bbf-69a45ce8990e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3dparty\ImGuiFileDialog\stb">
+      <UniqueIdentifier>{9164ac2d-90ac-42a7-adff-4735d4dbef51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -86,6 +95,12 @@
     </ClCompile>
     <ClCompile Include="configs\glfwConfig.cpp">
       <Filter>源文件\configs</Filter>
+    </ClCompile>
+    <ClCompile Include="3dparty\ImGuiFileDialog\ImGuiFileDialog.cpp">
+      <Filter>3dparty\ImGuiFileDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\fileDialog\openFileDialog.cpp">
+      <Filter>源文件\ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +157,24 @@
     </ClInclude>
     <ClInclude Include="configs\glfwConfig.h">
       <Filter>头文件\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="3dparty\ImGuiFileDialog\ImGuiFileDialog.h">
+      <Filter>3dparty\ImGuiFileDialog</Filter>
+    </ClInclude>
+    <ClInclude Include="3dparty\ImGuiFileDialog\ImGuiFileDialogConfig.h">
+      <Filter>3dparty\ImGuiFileDialog</Filter>
+    </ClInclude>
+    <ClInclude Include="3dparty\ImGuiFileDialog\stb\stb_image.h">
+      <Filter>3dparty\ImGuiFileDialog\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="3dparty\ImGuiFileDialog\stb\stb_image_resize.h">
+      <Filter>3dparty\ImGuiFileDialog\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="3dparty\ImGuiFileDialog\dirent\dirent.h">
+      <Filter>3dparty\ImGuiFileDialog\dirent</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\fileDialog\openFileDialog.h">
+      <Filter>头文件\ui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
