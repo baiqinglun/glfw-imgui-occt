@@ -6,12 +6,13 @@ void slab::initImgui(GLFWwindow* window)
 {
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
-    const char* glsl_version = "#version 130";
+    const char* glsl_version = "#version 330";
     ImGui_ImplOpenGL3_Init(glsl_version);
 
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+    io.Fonts->AddFontFromFileTTF("C:\\WINDOWS\\FONTS\\SIMSUN.TTC", 14.0f, nullptr, io.Fonts->GetGlyphRangesChineseFull());
 
     ImGui::StyleColorsDark();
 
@@ -24,14 +25,10 @@ void slab::initImgui(GLFWwindow* window)
 
 void slab::imguiRun()
 {
-    //ui::MainMenuBar* mainMenuBar = new ui::MainMenuBar();
-    //mainMenuBar->render();
     std::unique_ptr<ui::MainMenuBar> mainMenuBar = std::make_unique<ui::MainMenuBar>();
     mainMenuBar.get()->render();
 
-    
 
-    //delete mainMenuBar;
 }
 
 void slab::imguiClear()

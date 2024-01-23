@@ -1,6 +1,9 @@
 #include "mainMenuBar.h"
 #include <iostream>
 
+bool ui::MainMenuBar::is_open_file_ = false;
+bool ui::MainMenuBar::is_open_attr_ = false;
+
 void ui::MainMenuBar::render()
 {
     ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_Always);
@@ -24,10 +27,7 @@ void ui::MainMenuBar::render()
             // 添加 File 菜单项
             if (ImGui::BeginMenu("create"))
             {
-                if (ImGui::MenuItem("point")) {
-                    //ImGui::OpenPopup("DialogPopup");
-                    is_open_attr = true;
-                }
+                if (ImGui::MenuItem("point", "", &is_open_attr_)) { }
                 if (ImGui::MenuItem("line")) { /* 处理打开操作 */ }
                 if (ImGui::MenuItem("plane")) { /* 处理打开操作 */ }
                 ImGui::EndMenu();
@@ -46,29 +46,21 @@ void ui::MainMenuBar::render()
 
         ImGui::EndMenuBar();
     }
-
     // 结束 ImGui 窗口
     ImGui::End();
 
-    if (is_open_attr)
+    if (is_open_attr_)
     {
-        ImGui::OpenPopup("DialogPopup");
-        if (ImGui::BeginPopupModal("DialogPopup", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-            ImGui::Text("This is a modal dialog.");
-
-            if (ImGui::Button("OK", ImVec2(120, 0))) {
-                // 处理OK按钮点击事件
-                ImGui::CloseCurrentPopup(); // 关闭对话框
-            }
-
-            ImGui::EndPopup();
-        }
-
+        attributeDialog = std::make_unique<AttributeDialog>();
+        attributeDialog.get()->isShow(&is_open_attr_);
+        attributeDialog.get()->render();
     }
 
-
-    fileDialog = std::make_unique<OpenFileDialog>();
-    fileDialog.get()->render();
+    if (is_open_file_)
+    {
+        fileDialog = std::make_unique<OpenFileDialog>();
+        fileDialog.get()->render();
+    }
 
 
 }
@@ -79,16 +71,15 @@ void ui::MainMenuBar::openFile()
     config.path = ".";
     config.countSelectionMax = -1;
     ImGuiFileDialog::Instance()->OpenDialog("ChooseFileDlgKey", "Choose File", ".*,.stl,.vtk,.stp,.step", config);
+    is_open_file_ = true;
 }
 
 void ui::MainMenuBar::saveFile()
 {
-
+    
 }
 
 void ui::MainMenuBar::createPoint()
 {
-    //attributeDialog = std::make_unique<AttributeDialog>();
-    //attributeDialog.get()->render();
-    
+   
 }

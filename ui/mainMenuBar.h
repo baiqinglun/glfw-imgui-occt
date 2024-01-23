@@ -17,10 +17,10 @@ namespace ui
 	private:
 		std::unique_ptr<OpenFileDialog> fileDialog;
 		std::unique_ptr<AttributeDialog> attributeDialog;
-		bool is_open_file_ = false;
 		void openFile();
 		void saveFile();
 		void createPoint();
-		bool is_open_attr = false;
+		static bool is_open_file_;
+		static bool is_open_attr_;
 	};
 }
