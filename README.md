@@ -1,2 +1,2 @@
 # safeLab-CAE
- About 使用框架glfw、imgui、occt等框架开发的高性能CAE软件
+ 基于glfw、imgui和occt框架搭建的高性能界面
